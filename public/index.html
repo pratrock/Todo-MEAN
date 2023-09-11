@@ -29,6 +29,11 @@
     />
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <style>
+      svg {
+        width: 0.8rem;
+      }
+    </style>
     <title>Todo App</title>
   </head>
   <body>
@@ -53,24 +58,73 @@
               ><button
                 ng-show="list.isTodo===true"
                 ng-click="changeProgress(list)"
+                class="btn btn-outline-dark""
               >
-                Progress</button
-              ><button ng-show="list.isTodo===true" ng-click="changeDone(list)">
+                Progress<svg
+                  focusable="false"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  data-testid="ArrowForwardIcon"
+                  aria-label="fontSize small"
+                >
+                  <path
+                    d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                  ></path>
+                </svg></button
+              ><button
+                ng-show="list.isTodo===true"
+                class="btn btn-outline-dark"
+                ng-click="changeDone(list)"
+              >
                 Done
+                <svg
+                  focusable="false"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  data-testid="ArrowForwardIcon"
+                  aria-label="fontSize small"
+                >
+                  <path
+                    d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                  ></path>
+                </svg>
               </button>
             </td>
             <td>
               <span ng-show="list.progress===true">{{list.todo}}</span
               ><button
+                class="btn btn-outline-dark"
                 ng-show="list.progress===true"
                 ng-click="changeTodo(list)"
               >
+                <svg
+                  focusable="false"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  aria-label="fontSize small"
+                >
+                  <path
+                    d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+                  ></path>
+                </svg>
                 Todo</button
               ><button
+                class="btn btn-outline-secondary"
                 ng-show="list.progress===true"
                 ng-click="changeDone(list)"
               >
                 Done
+                <svg
+                  focusable="false"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  data-testid="ArrowForwardIcon"
+                  aria-label="fontSize small"
+                >
+                  <path
+                    d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                  ></path>
+                </svg>
               </button>
             </td>
             <!--  <td ng-show="list.isTodo==true">{{list.todo}}</td>
@@ -80,12 +134,34 @@
               ><button
                 ng-show="list.completed==true"
                 ng-click="changeTodo(list)"
+                class="btn btn-outline-dark"
               >
+                <svg
+                  focusable="false"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  aria-label="fontSize small"
+                >
+                  <path
+                    d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+                  ></path>
+                </svg>
                 Todo</button
               ><button
                 ng-show="list.completed==true"
                 ng-click="changeProgress(list)"
+                class="btn btn-outline-dark"
               >
+                <svg
+                  focusable="false"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  aria-label="fontSize small"
+                >
+                  <path
+                    d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+                  ></path>
+                </svg>
                 Progress
               </button>
             </td>
